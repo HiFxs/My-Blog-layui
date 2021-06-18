@@ -104,6 +104,7 @@ public class AdminController {
         if (StringUtils.isEmpty(username) || StringUtils.isEmpty(password)) {
             return ResultGenerator.getResultByHttp(HttpStatusEnum.BAD_REQUEST);
         }
+
         QueryWrapper<AdminUser> queryWrapper = new QueryWrapper<AdminUser>(
                 new AdminUser().setLoginUserName(username)
                         .setLoginPassword(MD5Utils.MD5Encode(password,"UTF-8"))
