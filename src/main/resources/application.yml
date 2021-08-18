@@ -1,6 +1,6 @@
 server:
   port: 28084
-
+#测试信息
 spring:
   datasource:
     name: myBlog
